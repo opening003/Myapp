@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-title>Home</ion-title>
+
+  <ion-item>
+
+    <ion-label floating>
+      <ion-icon name="ios-man"></ion-icon> &nbsp; &nbsp;ชื่อผู้ใช้
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>
+      <ion-icon name="md-lock"></ion-icon> &nbsp; &nbsp;รหัสผ่าน
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <button ion-button block (click)="singIn(username,password)">
+      <ion-icon name="md-key"></ion-icon> &nbsp; &nbsp; เข้าสู้ระบบ
+    </button>
+  </ion-item>
+  <h3>{{loginResult}}</h3>
+
+
+</ion-content>
